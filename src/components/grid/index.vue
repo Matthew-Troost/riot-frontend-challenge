@@ -1,8 +1,11 @@
 <template>
   <div class="bg-white rounded-lg shadow">
-    <div class="py-4 px-6 text-xl border-b border-gray-400">
+    <div class="p-6 text-xl border-b border-gray-400">
       Attacks
     </div>
+    <row :success="true" />
+        <row :success="false" />
+            <row :success="true" />
     <div class="p-4 text-center text-purple-700">
       <span
         ><svg
@@ -18,3 +21,13 @@
     </div>
   </div>
 </template>
+
+<script>
+import row from "./row";
+
+export default {
+  components: {
+    row,
+  },
+};
+</script>

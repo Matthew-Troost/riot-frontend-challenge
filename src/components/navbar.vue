@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap bg-transparent py-5 border-b border-gray-600">
+  <nav class="flex items-center justify-between flex-wrap bg-transparent py-5 border-b border-gray-700">
     <div class="flex items-center flex-shrink-0 text-white mr-8">
       <img :src="logo" />
     </div>
