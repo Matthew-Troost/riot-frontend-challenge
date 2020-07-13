@@ -1,13 +1,15 @@
 <template>
   <div>
     <h1 class="text-3xl font-bold text-white my-10">Attacks</h1>
-    <grid :attacks="attacks" />
+    <grid title="Attacks" :canLoadMore="canLoadMore" @load-more="loadMore">
+
+    </grid>
     <button @click="loadMore">test</button>
   </div>
 </template>
 
 <script>
-import grid from "@/components/grid";
+import grid from "@/components/grid.vue";
 import { getAttacks } from "@/apollo/queries.gql";
 
 export default {

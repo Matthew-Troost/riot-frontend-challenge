@@ -22,19 +22,19 @@
       <div class="text-sm lg:flex-grow">
         <a
           href="#"
-          class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-10 "
+          class="block py-1 px-2 mt-4 rounded-md lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-6"
         >
           Dashboard
         </a>
         <a
           href="#"
-          class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-10"
+          class="block py-1 px-2 mt-4 rounded-md lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-6"
         >
           Team
         </a>
         <a
           href="#"
-          class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white"
+          class="block py-1 px-2 mt-4 rounded-md lg:inline-block lg:mt-0 text-gray-400 hover:text-white hover:bg-black"
         >
           Simulation
         </a>
