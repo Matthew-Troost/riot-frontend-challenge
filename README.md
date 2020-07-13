@@ -1,4 +1,4 @@
-# riot-frontend-challenge
+# Riot Frontend Challenge
 
 ## Project setup
 ```
