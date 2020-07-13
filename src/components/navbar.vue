@@ -1,6 +1,6 @@
 <template>
   <nav class="flex items-center justify-between flex-wrap bg-transparent py-5 border-b border-gray-600">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-8">
       <img :src="logo" />
     </div>
     <div class="block lg:hidden">
@@ -21,19 +21,19 @@
     <div :class="`${isOpen ? 'block' : 'hidden'} w-full flex-grow lg:flex lg:items-center lg:w-auto`">
       <div class="text-sm lg:flex-grow">
         <a
-          href="#responsive-header"
-          class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white p-2 mr-4"
+          href="#"
+          class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-10 "
         >
           Dashboard
         </a>
         <a
-          href="#responsive-header"
-          class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-4"
+          href="#"
+          class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-10"
         >
           Team
         </a>
         <a
-          href="#responsive-header"
+          href="#"
           class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white"
         >
           Simulation

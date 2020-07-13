@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 .gradient-background {
-  background: -webkit-linear-gradient(#253040 20em, #f9fafb 20em);
+  background: -webkit-linear-gradient(#253040 18em, #f9fafb 18em);
 }
