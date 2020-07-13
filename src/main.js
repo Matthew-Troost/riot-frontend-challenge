@@ -1,9 +1,20 @@
-import Vue from 'vue'
-import App from './App.vue'
-import './assets/styles/index.css'
+import Vue from "vue";
+import App from "./App.vue";
+import ApolloClient from "apollo-boost";
+import VueApollo from "vue-apollo";
 
-Vue.config.productionTip = false
+import "./assets/styles/index.css";
+
+Vue.config.productionTip = false;
+Vue.use(VueApollo);
+
+const apolloProvider = new VueApollo({
+  defaultClient: new ApolloClient({
+    uri: "https://riot-technical-test-api.herokuapp.com/v1/graphql",
+  }),
+});
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  apolloProvider,
+  render: (h) => h(App),
+}).$mount("#app");
