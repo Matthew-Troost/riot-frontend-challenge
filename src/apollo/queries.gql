@@ -1,0 +1,14 @@
+query getAttacks($limit: Int!) {
+  events(limit: $limit, order_by: { created_at: desc }) {
+    id
+    created_at
+    employee {
+      firstname
+      lastname
+    }
+    campaign {
+      name
+    }
+    status
+  }
+}
