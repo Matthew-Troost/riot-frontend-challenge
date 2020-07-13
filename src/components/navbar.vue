@@ -1,11 +1,12 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap bg-transparent h-20 border-b border-gray-600">
+  <nav class="flex items-center justify-between flex-wrap bg-transparent py-5 border-b border-gray-600">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
       <img :src="logo" />
     </div>
     <div class="block lg:hidden">
       <button
         class="flex items-center px-3 py-2 border rounded text-white-200 border-white-400 hover:text-white hover:border-white"
+      @click="isOpen = !isOpen"
       >
         <svg
           class="fill-current h-3 w-3"
@@ -17,23 +18,23 @@
         </svg>
       </button>
     </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div :class="`${isOpen ? 'block' : 'hidden'} w-full flex-grow lg:flex lg:items-center lg:w-auto`">
       <div class="text-sm lg:flex-grow">
         <a
           href="#responsive-header"
-          class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
+          class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white p-2 mr-4"
         >
           Dashboard
         </a>
         <a
           href="#responsive-header"
-          class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
+          class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white mr-4"
         >
           Team
         </a>
         <a
           href="#responsive-header"
-          class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white"
+          class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white"
         >
           Simulation
         </a>
@@ -55,6 +56,7 @@ export default {
   data() {
     return {
       logo,
+      isOpen: false
     };
   },
 };
