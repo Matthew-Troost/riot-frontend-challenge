@@ -3,9 +3,7 @@
     <div class="p-6 text-xl border-b border-gray-400">
       Attacks
     </div>
-    <row :success="true" />
-        <row :success="false" />
-            <row :success="true" />
+    <row v-for="attack in attacks" :key="attack.id" :success="true" />
     <div class="p-4 text-center text-purple-700">
       <span
         ><svg
@@ -26,6 +24,12 @@
 import row from "./row";
 
 export default {
+  props: {
+    attacks: {
+      type: Array,
+      default: () => [],
+    },
+  },
   components: {
     row,
   },
