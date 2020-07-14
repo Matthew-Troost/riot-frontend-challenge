@@ -25,7 +25,7 @@
 
         <div class="flex flex-grow-0">
           <div class="self-center flex text-gray-600 text-sm">
-            20 hours ago
+            {{ attack.created_at | moment("from", "now") }}
           </div>
           <badge class="self-center" />
           <svg

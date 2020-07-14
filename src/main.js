@@ -3,6 +3,7 @@ import App from "./App.vue";
 import VueRouter from "vue-router";
 import ApolloClient from "apollo-boost";
 import VueApollo from "vue-apollo";
+import VueMoment from "vue-moment";
 import router from "./router";
 
 import "./assets/styles/index.css";
@@ -10,6 +11,7 @@ import "./assets/styles/index.css";
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
+Vue.use(VueMoment);
 Vue.use(VueApollo);
 
 const apolloProvider = new VueApollo({
