@@ -28,16 +28,9 @@
             {{ attack.created_at | moment("from", "now") }}
           </div>
           <badge class="self-center" :success="attack.status == 'success'" />
-          <svg
+          <chevRight
             class="h-4 w-4 ml-6 self-center fill-current text-gray-600"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
+          />
         </div>
       </div>
     </grid>
@@ -47,12 +40,14 @@
 <script>
 import grid from "@/components/grid.vue";
 import badge from "@/components/badge.vue";
+import chevRight from "@/assets/images/icons/chev-right.svg";
 import { getAttacks } from "@/apollo/queries.gql";
 
 export default {
   components: {
     grid,
     badge,
+    chevRight,
   },
   data() {
     return {

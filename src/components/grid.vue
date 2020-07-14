@@ -6,29 +6,28 @@
     <slot></slot>
     <div v-if="canLoadMore" class="p-4 text-center text-purple-700">
       <span @click="$emit('load-more')"
-        ><svg
-          class="h-6 w-6 inline fill-current text-purple-700"
-          viewBox="0 0 20 20"
-        >
-          <path
-            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          ></path></svg
-      >load more</span>
+        ><chevDown class="h-6 w-6 inline fill-current text-purple-700" /> load
+        more</span
+      >
     </div>
   </div>
 </template>
 <script>
+import chevDown from "@/assets/images/icons/chev-down.svg";
+
 export default {
+  components: {
+    chevDown,
+  },
   props: {
     title: {
       type: String,
       default: "Grid Title",
     },
     canLoadMore: {
-        type: Boolean,
-        default: false
-    }
-  }
+      type: Boolean,
+      default: false,
+    },
+  },
 };
 </script>
