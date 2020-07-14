@@ -5,7 +5,7 @@
       <div
         v-for="attack in attacks"
         :key="attack.id"
-        class="p-6 border-b border-gray-400 flex"
+        class="flex p-6 border-b border-gray-400 cursor-pointer hover:bg-gray-100"
       >
         <div class="inline-block flex-grow">
           <div class="text-purple-700">
@@ -24,12 +24,12 @@
         </div>
 
         <div class="flex flex-grow-0">
-          <div class="self-center flex text-gray-600 text-sm">
+          <div class="self-center flex font-light text-gray-600 text-sm">
             {{ attack.created_at | moment("from", "now") }}
           </div>
-          <badge class="self-center" />
+          <badge class="self-center" :success="attack.status == 'success'" />
           <svg
-            class="h-4 w-4 ml-6 self-center fill-current text-purple-700"
+            class="h-4 w-4 ml-6 self-center fill-current text-gray-600"
             viewBox="0 0 20 20"
           >
             <path
