@@ -1,5 +1,5 @@
 <template>
-  <div class="px-20 min-h-screen gradient-background"> 
+  <div class="px-20 pb-20 min-h-screen gradient-background"> 
     <navbar />
     <router-view />
   </div>

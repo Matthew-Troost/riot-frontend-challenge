@@ -2,23 +2,32 @@
   <div>
     <h1 class="text-3xl font-bold text-white my-10">Attacks</h1>
     <grid title="Attacks" :canLoadMore="canLoadMore" @load-more="loadMore">
-      <div v-for="attack in attacks" :key="attack.id" class="p-6 border-b border-gray-400 flex">
+      <div
+        v-for="attack in attacks"
+        :key="attack.id"
+        class="p-6 border-b border-gray-400 flex"
+      >
         <div class="inline-block flex-grow">
-          <span class="text-purple-700 block">Maxime Binet</span>
-          <span class="block font-light text-gray-600"
-            >Sent by the
-            <span class="font-normal border-b-2 border-dotted"
-              >One-off campaign to 1 employee</span
+          <div class="text-purple-700">
+            {{ attack.employee.firstname }} {{ attack.employee.lastname }}
+          </div>
+          <div class="font-light text-gray-600">
+            <span v-if="attack.campaign"
+              >Sent by the
+              <span class="font-normal border-b-2 border-dotted">{{
+                attack.campaign.name
+              }}</span>
+              campaign</span
             >
-            campaign</span
-          >
+            <span v-else>Sent individually</span>
+          </div>
         </div>
 
         <div class="flex flex-grow-0">
           <div class="self-center flex text-gray-600 text-sm">
             20 hours ago
           </div>
-         <badge class="self-center" />
+          <badge class="self-center" />
           <svg
             class="h-4 w-4 ml-6 self-center fill-current text-purple-700"
             viewBox="0 0 20 20"
@@ -37,13 +46,13 @@
 
 <script>
 import grid from "@/components/grid.vue";
-import badge from "@/components/badge.vue"
+import badge from "@/components/badge.vue";
 import { getAttacks } from "@/apollo/queries.gql";
 
 export default {
   components: {
     grid,
-    badge
+    badge,
   },
   data() {
     return {
