@@ -1,7 +1,7 @@
 <template>
   <div
     :class="
-      `text-sm font-medium rounded-full bg-black py-1 px-3 ml-6 ${
+      `text-sm font-medium rounded-full bg-black py-1 px-3 ${
         success ? 'bg-green-200 text-green-800' : 'bg-red-200 text-red-800'
       }`
     "

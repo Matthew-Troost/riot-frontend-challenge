@@ -23,13 +23,15 @@
           </div>
         </div>
 
-        <div class="flex flex-grow-0">
+        <div class="flex">
           <div class="self-center flex font-light text-gray-600 text-sm">
             {{ attack.created_at | moment("from", "now") }}
           </div>
-          <badge class="self-center" :success="attack.status == 'success'" />
+          <div class="self-center w-40 text-center mx-8">
+            <badge class="m-auto fit-content" :success="attack.status == 'success'" />
+          </div>
           <chevRight
-            class="h-4 w-4 ml-6 self-center fill-current text-gray-600"
+            class="h-4 w-4 self-center fill-current text-gray-600"
           />
         </div>
       </div>

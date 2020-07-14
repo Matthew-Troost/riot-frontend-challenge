@@ -49,7 +49,7 @@
       <div>
         <a
           href="#"
-          class="inline-block text-sm px-4 py-2 leading-none text-gray-400 mt-4 lg:mt-0"
+          class="inline-block text-sm p-2 leading-none text-gray-400 mt-4 lg:mt-0"
           >Louis Cibot</a
         ><chevDown class="inline h-4 w-4 fill-current text-gray-400" />
       </div>
