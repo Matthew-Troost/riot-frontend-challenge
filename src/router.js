@@ -1,19 +1,23 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 import Simulation from "./pages/simulation.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-export default new VueRouter({
-    routes: [
-        {
-            path: '/simulation',
-            name: 'Simulation',
-            component: Simulation,
-            meta: {
-                title: 'Simulation',
-              }
-        }
-    ],
-    mode: 'history'
-})
+const router = new VueRouter({
+  routes: [
+    {
+      path: "/simulation",
+      name: "Simulation",
+      component: Simulation,
+      meta: {
+        title: "Simulation",
+      },
+    },
+  ],
+  mode: "history",
+});
+
+router.replace({ path: "/simulation", redirect: "/" });
+
+export default router;
