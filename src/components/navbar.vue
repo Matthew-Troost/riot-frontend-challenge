@@ -40,7 +40,7 @@
               $route.path == '/simulation'
                 ? 'bg-gray-900 text-white'
                 : 'text-gray-400 hover:text-white'
-            } block py-1 px-2 mt-4 rounded-md lg:inline-block lg:mt-0`
+            } block py-1 px-3 mt-4 rounded-md lg:inline-block lg:mt-0`
           "
         >
           Simulation
@@ -49,9 +49,9 @@
       <div>
         <a
           href="#"
-          class="inline-block text-sm p-2 leading-none text-gray-400 mt-4 lg:mt-0"
-          >Louis Cibot</a
-        ><chevDown class="inline h-4 w-4 fill-current text-gray-400" />
+          class="inline-block text-sm p-2 leading-none text-gray-400 mt-4 lg:mt-0 hover:text-white"
+          >Louis Cibot <chevDown class="inline h-4 w-4 fill-current text-gray-400 hover:text-white" /></a
+        >
       </div>
     </div>
   </nav>

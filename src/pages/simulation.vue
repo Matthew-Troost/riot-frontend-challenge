@@ -1,20 +1,20 @@
 <template>
   <div>
     <h1 class="text-3xl font-bold text-white my-10">Attacks</h1>
-    <grid title="Attacks" :canLoadMore="canLoadMore" @load-more="loadMore">
+    <grid title="Attacks" :canLoadMore="canLoadMore" :loading="$apollo.loading" @load-more="loadMore">
       <div
         v-for="attack in attacks"
         :key="attack.id"
-        class="flex p-6 border-b border-gray-400 cursor-pointer hover:bg-gray-100"
+        class="flex p-6 border-b border-gray-300 hover:bg-gray-100"
       >
         <div class="inline-block flex-grow">
-          <div class="text-purple-700">
+          <span class="font-medium cursor-pointer text-indigo-600 hover:text-indigo-800">
             {{ attack.employee.firstname }} {{ attack.employee.lastname }}
-          </div>
+          </span>
           <div class="font-light text-gray-600">
             <span v-if="attack.campaign"
               >Sent by the
-              <span class="font-normal border-b-2 border-dotted">{{
+              <span class="font-normal cursor-pointer border-b-2 border-dotted hover:text-gray-700">{{
                 attack.campaign.name
               }}</span>
               campaign</span
@@ -27,11 +27,11 @@
           <div class="self-center flex font-light text-gray-600 text-sm">
             {{ attack.created_at | moment("from", "now") }}
           </div>
-          <div class="self-center w-40 text-center mx-8">
+          <div class="self-center w-32 text-center mx-8">
             <badge class="m-auto fit-content" :success="attack.status == 'success'" />
           </div>
           <chevRight
-            class="h-4 w-4 self-center fill-current text-gray-600"
+            class="h-4 w-4 self-center fill-current cursor-pointer text-gray-600"
           />
         </div>
       </div>
