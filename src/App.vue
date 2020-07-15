@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen px-5 pb-5 md:px-20 sm:pb-20" :class="background">
+  <div id="app" class="min-h-screen px-5 pb-5 md:px-20 sm:pb-20" :class="background">
     <navbar @toggle="navOpen = !navOpen" />
     <router-view />
   </div>

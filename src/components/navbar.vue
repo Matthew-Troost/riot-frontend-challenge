@@ -6,7 +6,10 @@
       <logo />
     </div>
     <div class="block cursor-pointer lg:hidden">
-      <span class="flex items-center px-3 py-2 outline-none" @click="isOpen = !isOpen">
+      <span
+        class="flex items-center px-3 py-2 outline-none"
+        @click="isOpen = !isOpen"
+      >
         <burgerMenu class="fill-current text-white h-4 w-4" />
       </span>
     </div>
@@ -18,20 +21,20 @@
       "
     >
       <div class="text-sm lg:flex-grow">
-        <a
-          href="#"
+        <router-link
+          to="/simulation"
           class="block py-1 px-2 mt-4 rounded-md lg:inline-block lg:mt-0 sm:px-0 text-gray-400 hover:text-white mr-6"
         >
           Dashboard
-        </a>
-        <a
-          href="#"
+        </router-link>
+        <router-link
+          to="/simulation"
           class="block py-1 px-2 mt-4 rounded-md lg:inline-block lg:mt-0 sm:px-0 text-gray-400 hover:text-white mr-6"
         >
           Team
-        </a>
-        <a
-          href="#"
+        </router-link>
+        <router-link
+          to="/simulation"
           :class="
             `${
               $route.path == '/simulation'
@@ -41,7 +44,7 @@
           "
         >
           Simulation
-        </a>
+        </router-link>
       </div>
       <div>
         <a
@@ -72,10 +75,10 @@ export default {
       isOpen: false,
     };
   },
-  watch:{
-    isOpen(){
-      this.$emit('toggle')
-    }
-  }
+  watch: {
+    isOpen() {
+      this.$emit("toggle");
+    },
+  },
 };
 </script>
