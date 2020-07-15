@@ -24,10 +24,10 @@
         </div>
 
         <div class="flex">
-          <div class="self-center flex font-light text-gray-600 text-sm">
+          <div class="self-center flex font-light text-gray-600 text-sm hidden lg:block">
             {{ attack.created_at | moment("from", "now") }}
           </div>
-          <div class="self-center w-32 text-center mx-8">
+          <div class="self-center w-10 text-center mx-8 sm:w-32">
             <badge class="m-auto fit-content" :success="attack.status == 'success'" />
           </div>
           <chevRight

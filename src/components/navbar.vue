@@ -6,12 +6,9 @@
       <logo />
     </div>
     <div class="block lg:hidden">
-      <button
-        class="flex items-center px-3 py-2 border rounded text-white-200 border-white-400 hover:text-white hover:border-white"
-        @click="isOpen = !isOpen"
-      >
-        <burgerMenu class="fill-current h-3 w-3" />
-      </button>
+      <span class="flex items-center px-3 py-2 outline-none" @click="isOpen = !isOpen">
+        <burgerMenu class="fill-current text-white h-4 w-4" />
+      </span>
     </div>
     <div
       :class="
@@ -50,8 +47,10 @@
         <a
           href="#"
           class="inline-block text-sm p-2 leading-none text-gray-400 mt-4 lg:mt-0 hover:text-white"
-          >Louis Cibot <chevDown class="inline h-4 w-4 fill-current text-gray-400 hover:text-white" /></a
-        >
+          >Louis Cibot
+          <chevDown
+            class="inline h-4 w-4 fill-current text-gray-400 hover:text-white"
+        /></a>
       </div>
     </div>
   </nav>

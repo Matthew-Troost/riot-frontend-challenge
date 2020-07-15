@@ -8,7 +8,7 @@
   >
     <x v-if="success" class="h-4 w-4 inline fill-current text-red-800" />
     <check v-else class="h-4 w-4 inline fill-current text-green-800" />
-    {{ success ? "Successful" : "Unsuccessful" }}
+    <span class="hidden sm:inline-block">{{ success ? "Successful" : "Unsuccessful" }}</span>
   </div>
 </template>
 <script>
