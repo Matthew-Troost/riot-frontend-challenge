@@ -8,6 +8,10 @@
   background: -webkit-linear-gradient(#253040 18em, #f9fafb 18em);
 }
 
+.gradient-background-extended {
+  background: -webkit-linear-gradient(#253040 30em, #f9fafb 30em);
+}
+
 .fit-content{
   width: fit-content;
 }
